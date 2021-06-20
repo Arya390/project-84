@@ -70,7 +70,7 @@ function keydown(e){
 function up(){
     if (car1_y >= 0){
         car1_y = car1_y - 10
-        console.log("when up arrow is pressed , =x" + car1_x + "|y" + car1_y);
+        console.log("when up arrow is pressed , x = " + car1_x + "| y = " + car1_y);
         uploadBackground();
         uploadcar1();
         uploadcar2();
@@ -80,7 +80,7 @@ function up(){
 function down(){
     if (car1_y <= 500){
         car1_y = car1_y + 10
-        console.log("when down arrow is pressed , =x" + car1_x + "|y" + car1_y);
+        console.log("when down arrow is pressed , x = " + car1_x + "| y = " + car1_y);
         uploadBackground();
         uploadcar1();
         uploadcar2();
@@ -90,7 +90,7 @@ function down(){
 function left(){
     if (car1_y >= 0){
         car1_x = car1_x - 10
-        console.log("when down arrow is pressed , =x" + car1_x + "|y" + car1_y);
+        console.log("when left arrow is pressed , x = " + car1_x + "| y = " + car1_y);
         uploadBackground();
         uploadcar1();
         uploadcar2();
@@ -100,9 +100,15 @@ function left(){
 function right(){
     if (car1_y <= 700){
         car1_x = car1_x + 10
-        console.log("when down arrow is pressed , =x" + car1_x + "|y" + car1_y);
+        console.log("when right arrow is pressed ,  x = "+ car1_x + "| y = " + car1_y)
         uploadBackground();
         uploadcar1();
         uploadcar2();
     }
+}
+
+if(car1_x > 700)
+{
+    console.log("car1 Won");
+    document.getElementById('game_status').innerHTML = "Car 1 Won!!"
 }
